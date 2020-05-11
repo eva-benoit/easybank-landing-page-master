@@ -1,1 +1,127 @@
 // Layout - Main
+
+// HTML main tags
+
+a {
+  text-decoration: none;
+}
+
+section {
+  padding: 0 15px;
+  overflow: auto;
+}
+
+
+// Header
+
+header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 17px 24px 18px;
+  background-color: $white;
+
+  .btn {
+    display: none;
+  }
+}
+
+
+// Hero section
+
+#section-hero {
+  position: relative;
+  z-index: -1;
+  padding-bottom: 75px;
+  margin-top: -122px;
+  background: $very-light-gray url("./images/bg-intro-mobile.svg") 0 60px/100% no-repeat;
+
+  img {
+    width: 100%;
+  }
+}
+
+
+// Blurbs list
+
+#list-blurbs {
+  padding-top: 55px;
+  background-color: $light-grayish-blue;
+
+  .list {
+    flex-direction: column;
+    margin: 45px 0 40px;
+  }
+}
+
+
+// Articles list
+
+#list-articles {
+  padding-top: 80px;
+  background-color: $very-light-gray;
+
+  h2 {
+    text-transform: capitalize;
+  }
+
+  .list {
+    flex-direction: column;
+  }
+}
+
+
+// Footer
+//
+// Social networks, links, CTA button, copyright and attribution
+
+footer {
+  padding: 40px 0 15px;
+  margin-top: 80px;
+  text-transform: capitalize;
+  background-color: $dark-blue;
+
+  .btn {
+    margin: 27px 0 9px;
+  }
+}
+
+#footer-social {
+  max-width: 185px;
+  margin: 25px auto;
+
+  a,
+  img {
+    display: block;
+  }
+
+  img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+#footer-nav {
+  overflow: auto;
+
+  a {
+    display: block;
+    margin: 8px 0;
+    color: $white;
+  }
+}
+
+#footer-copyright {
+  margin-bottom: 0;
+  font-size: .95rem;
+  letter-spacing: -.3px;
+}
+
+#footer-attribution {
+  font-size: .8rem;
+
+  a {
+    color: $grayish-blue;
+  }
+}
