@@ -1,7 +1,6 @@
 // Components - Menus
 
 .menu {
-  // Menu trigger icon on mobile
   &:before {
     content: url("./images/icon-hamburger.svg");
     display: block;
@@ -51,6 +50,32 @@
 
     nav {
       display: flex;
+    }
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $md-breakpoint) {
+  .menu {
+    &:before {
+      content: normal;
+    }
+
+    nav {
+      position: static;
+      display: block;
+      width: auto;
+      padding: 0;
+      margin: 0;
+      transform: none;
+
+      a {
+        margin-left: 25px;
+        font-size: .9rem;
+        color: $grayish-blue;
+      }
     }
   }
 }

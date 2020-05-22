@@ -1,6 +1,14 @@
 // Layout - Main
 
+body {
+  overflow-x: hidden;
+}
+
 // HTML main tags
+
+* {
+  transition: all .5s;
+}
 
 a {
   text-decoration: none;
@@ -16,6 +24,7 @@ section {
 
 header {
   position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -32,7 +41,7 @@ header {
 
 #section-hero {
   position: relative;
-  z-index: -1;
+  z-index: 1;
   padding-bottom: 75px;
   margin-top: -122px;
   background: $very-light-gray url("./images/bg-intro-mobile.svg") 0 60px/100% no-repeat;
@@ -51,6 +60,7 @@ header {
 
   .list {
     flex-direction: column;
+    align-items: center;
     margin: 45px 0 40px;
   }
 }
@@ -60,6 +70,7 @@ header {
 
 #list-articles {
   padding-top: 80px;
+  padding-bottom: 80px;
   background-color: $very-light-gray;
 
   h2 {
@@ -78,7 +89,6 @@ header {
 
 footer {
   padding: 40px 0 15px;
-  margin-top: 80px;
   text-transform: capitalize;
   background-color: $dark-blue;
 
@@ -123,5 +133,138 @@ footer {
 
   a {
     color: $grayish-blue;
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $md-breakpoint) {
+  #section-hero {
+    background-position: 0 -400px;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  #list-articles .list {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 10%;
+  }
+}
+
+@media all and (min-width: $xl-breakpoint) {
+  section,
+  footer {
+    padding-right: 165px;
+    padding-left: 165px;
+  }
+
+  header {
+    padding: 18px 165px;
+
+    .btn {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  #section-hero {
+    min-height: 686px;
+    margin-top: -106px;
+    overflow: visible;
+    background-image: url("./images/bg-intro-desktop.svg");
+    background-position: 624px -158px;
+    background-size: 89%;
+
+    img {
+      position: absolute;
+      top: -17px;
+      right: -131px;
+      width: auto;
+    }
+
+    .hero-container {
+      position: absolute;
+      top: 57%;
+      max-width: 30%;
+      transform: translateY(-50%);
+    }
+  }
+
+  #list-blurbs {
+    padding-top: 77px;
+
+    p {
+      max-width: 650px;
+    }
+
+    .list {
+      flex-direction: row;
+      align-items: center;
+      margin: 70px 0 64px;
+    }
+  }
+
+  #list-articles .list {
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 129px;
+    padding-top: 46px;
+    padding-bottom: 39px;
+
+    > img {
+      width: 140px;
+      height: 20px;
+    }
+
+    .btn {
+      margin: 1px 0 8px auto;
+    }
+  }
+
+  #footer-social {
+    max-width: 153px;
+    margin: 56px 0 0 0;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  #footer-nav {
+    position: relative;
+    top: -4px;
+    left: -42px;
+    column-count: 2;
+    column-gap: 5px;
+
+    a {
+      margin: 0;
+      font-size: .9rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  #footer-copyright {
+    text-align: right;
+  }
+
+  #footer-attribution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
   }
 }

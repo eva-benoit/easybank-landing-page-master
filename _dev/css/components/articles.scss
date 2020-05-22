@@ -16,15 +16,17 @@
     object-fit: cover;
   }
 
-  &:nth-of-type(3n) .article-content,
-  &:nth-of-type(4n) .article-content {
-    padding-left: 40px;
+  &:nth-of-type(3n),
+  &:nth-of-type(4n) {
+    padding-left: 20px;
   }
 }
 
 .article-content {
   padding: 22px 30px 22px 30px;
   background-color: $white;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
 
   .article-author {
     display: block;
@@ -45,5 +47,29 @@
     font-size: .8rem;
     line-height: 1.2rem;
     letter-spacing: -.1px;
+  }
+}
+
+
+// Media queries
+
+@media all and (min-width: $md-breakpoint) {
+  .article {
+    width: 255px;
+    padding: 0;
+    margin: 22px 0 0;
+
+    &:nth-of-type(3n),
+    &:nth-of-type(4n) {
+      padding-left: 0;
+    }
+
+    .article-content {
+      padding: 21px 22px 22px 25px;
+
+      .article-title {
+        margin: 3px 0 6px;
+      }
+    }
   }
 }

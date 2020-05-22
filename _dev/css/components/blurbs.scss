@@ -1,5 +1,21 @@
 // Components - Blurbs
 
 .blurb {
+  max-width: 330px;
   margin: 8px;
+}
+
+
+// Media queries
+
+@media all and (min-width: $xl-breakpoint) {
+  .blurb {
+    max-width: 257px;
+    margin: 0;
+
+    p {
+      font-size: .98rem;
+      line-height: 1.7rem;
+    }
+  }
 }
