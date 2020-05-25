@@ -15,7 +15,8 @@ $very-light-gray: hsl(0, 0%, 98%);
 $white: hsl(0, 0%, 100%);
 
 $transparent: hsla(0, 0%, 100%, 0);
-
+$gradient: linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
+$gradient-hover: linear-gradient(90deg, hsl(140, 62%, 70%) 0%, hsl(187, 64%, 69%) 100%);
 
 // Breakpoints
 //

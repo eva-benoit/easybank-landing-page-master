@@ -101,14 +101,52 @@ footer {
   max-width: 185px;
   margin: 25px auto;
 
-  a,
-  img {
+  .social-icon {
     display: block;
-  }
-
-  img {
     width: 25px;
     height: 25px;
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+
+    &.social-facebook {
+      background-image: url("./images/icon-facebook.svg");
+
+      &:hover {
+        background-image: url("./images/icon-facebook-hover.svg");
+      }
+    }
+
+    &.social-youtube {
+      background-image: url("./images/icon-youtube.svg");
+
+      &:hover {
+        background-image: url("./images/icon-youtube-hover.svg");
+      }
+    }
+
+    &.social-twitter {
+      background-image: url("./images/icon-twitter.svg");
+
+      &:hover {
+        background-image: url("./images/icon-twitter-hover.svg");
+      }
+    }
+
+    &.social-pinterest {
+      background-image: url("./images/icon-pinterest.svg");
+
+      &:hover {
+        background-image: url("./images/icon-pinterest-hover.svg");
+      }
+    }
+
+    &.social-instagram {
+      background-image: url("./images/icon-instagram.svg");
+
+      &:hover {
+        background-image: url("./images/icon-instagram-hover.svg");
+      }
+    }
   }
 }
 
@@ -218,9 +256,9 @@ footer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    max-height: 129px;
+    height: 129px;
     padding-top: 46px;
-    padding-bottom: 39px;
+    padding-bottom: 15px;
 
     > img {
       width: 140px;
@@ -228,6 +266,7 @@ footer {
     }
 
     .btn {
+      align-self: flex-end;
       margin: 1px 0 8px auto;
     }
   }
@@ -236,9 +275,10 @@ footer {
     max-width: 153px;
     margin: 56px 0 0 0;
 
-    img {
+    .social-icon {
       width: 20px;
       height: 20px;
+      background-size: 20px 20px;
     }
   }
 
@@ -253,6 +293,10 @@ footer {
       margin: 0;
       font-size: .9rem;
       line-height: 2.2rem;
+
+      &:hover {
+        color: $lime-green;
+      }
     }
   }
 

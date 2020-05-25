@@ -25,6 +25,7 @@
     transform: translateX(-50%);
 
     a {
+      position: relative;
       margin: 10px 0;
       font-size: 1.1rem;
       font-weight: 400;
@@ -75,6 +76,26 @@
         margin-left: 25px;
         font-size: .9rem;
         color: $grayish-blue;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 44px;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 4px;
+          background: $gradient;
+          opacity: 0;
+        }
+
+        &:hover {
+          color: $dark-blue;
+
+          &:after {
+            opacity: 1;
+          }
+        }
       }
     }
   }

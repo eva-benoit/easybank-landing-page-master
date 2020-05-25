@@ -10,6 +10,10 @@
   color: $white;
   text-transform: capitalize;
   cursor: pointer;
-  background: linear-gradient(90deg, $lime-green 0%, $bright-cyan 100%);
+  background: $gradient;
   border-radius: 25px;
+
+  &:hover {
+    background: $gradient-hover;
+  }
 }
