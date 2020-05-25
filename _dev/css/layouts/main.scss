@@ -108,7 +108,7 @@ footer {
     background-repeat: no-repeat;
     background-size: 25px 25px;
 
-    &.social-facebook {
+    &#social-facebook {
       background-image: url("./images/icon-facebook.svg");
 
       &:hover {
@@ -116,7 +116,7 @@ footer {
       }
     }
 
-    &.social-youtube {
+    &#social-youtube {
       background-image: url("./images/icon-youtube.svg");
 
       &:hover {
@@ -124,7 +124,7 @@ footer {
       }
     }
 
-    &.social-twitter {
+    &#social-twitter {
       background-image: url("./images/icon-twitter.svg");
 
       &:hover {
@@ -132,7 +132,7 @@ footer {
       }
     }
 
-    &.social-pinterest {
+    &#social-pinterest {
       background-image: url("./images/icon-pinterest.svg");
 
       &:hover {
@@ -140,7 +140,7 @@ footer {
       }
     }
 
-    &.social-instagram {
+    &#social-instagram {
       background-image: url("./images/icon-instagram.svg");
 
       &:hover {
